@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.108.0">
+  <title>Comic_Crawl</title>
+
+  <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/"> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/Home.css" rel="stylesheet">
+  <link href="css/imgList.css" rel="stylesheet">
+</head>
+
+
+<script src="js/home.js"></script>
+<script src="js/addTask.js"></script>
+<script src="js/comicList.js"></script>
+
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Comic_Crawl</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item" onclick="navLoadPage('Task')">
+            <a id="Task" class="nav-link active" aria-current="page" href="#">Task</a>
+          </li>
+          <li class="nav-item" onclick="navLoadPage('comicList')">
+            <a id="comicList" class="nav-link" aria-current="page" href="#">Comic</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div id="main_content"></div>
+    <div class="bg-light rounded"></div>
+  </main>
+
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

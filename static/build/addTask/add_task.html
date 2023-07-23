@@ -1,0 +1,40 @@
+<!-- <h3>Add Task</h3> -->
+<div class="container" style="padding-top:50px">
+        <form class="row g-2 form-inline" action="" id="send_task" method="post">
+            <div class="col-md-4 form-group">
+                <div class="input-group form-check form-switch" style="padding-left: 0px;">
+                    <input type="text" class="form-control" id="task_url" placeholder="输入任务URL">
+                    <span class="input-group-text">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" style="margin-left: -2em;" role="switch" value="1" name="select"
+                                id="flexSwitchCheckChecked">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">增量</label>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" id="site_name">
+                    <option value="None">请选择站点</option>
+                    <option value="36mh">36漫画</option>
+                    <option value="acgzone">ACG和谐漫画</option>
+                    <option value="alimanhua">阿狸漫画</option>
+                    <option value="zuimh">最漫画</option>
+                    <option value="mkzhan">漫客栈</option>
+                    <option value="iimanhua">爱漫画</option>
+                    <option value="baiman">百漫屋</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="start_sign" placeholder="Start Sign">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="end_sign" placeholder="End Sign" disabled>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-success" id="add_task">添加</button>
+            </div>
+        </form>
+        <div id="liveAlertPlaceholder"></div>
+</div>
