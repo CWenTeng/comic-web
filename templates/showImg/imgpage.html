@@ -38,7 +38,7 @@
             <div class="col-md-3 col-sm-2 col-xs-1">
             </div>
             <div class="col-md-6 col-sm-8 col-xs-12">
-                <img src="http://192.168.1.108:8888/{{ foo }}" width="100%">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='595' height='443'></svg>" data-src="http://192.168.1.108:8888/{{ foo }}" width="100%">
             </div>
             <div class="col-md-3 col-sm-2 col-xs-1">
             </div>
@@ -51,4 +51,37 @@
 
 
 </body>
+
+
+
+
+<script>
+  var imgs = document.querySelectorAll('img');
+  check();
+  //用来判断bound.top<=clientHeight的函数，返回一个bool值
+  function isIn(el) {
+      var bound = el.getBoundingClientRect();
+      var clientHeight = window.innerHeight;
+      return bound.top <= clientHeight;
+  }
+  //检查图片是否在可视区内，如果不在，则加载
+  function check() {
+      Array.from(imgs).forEach(function (el) {
+          if (isIn(el)) {
+              loadImg(el);
+          }
+      })
+  }
+  function loadImg(el) {
+      if (!el.src || el.src=="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='595' height='443'></svg>") {
+          var source = el.dataset.src;
+          el.src = source;
+      }
+  }
+  window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+      check();
+  }
+  
+  
+  </script>
 </html>
