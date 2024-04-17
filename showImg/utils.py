@@ -20,15 +20,14 @@ def compare(x, y):
 # dirList.sort(key=cmp_to_key(compare))
 # print(dirList)
 
-def dir_list(path,sort=True):
-    global COMIC_PATH
-    # print(COMIC_PATH)
-    # print(path)
-    COMIC_PATH = path
+def dir_list(path,sort=True,sort_type="file_name"):
     fileName = []
     dirList = os.listdir(path)
     if sort:
-        dirList.sort(key=cmp_to_key(compare))
+        if sort_type == 'create_time':
+            dirList.sort(key=cmp_to_key(compare))
+        else:
+            dirList.sort()
     for i in dirList:
         # filepath = path+'/'+i+'/'
         if i:
