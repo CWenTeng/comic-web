@@ -79,13 +79,21 @@ WSGI_APPLICATION = 'imgWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crawl',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'crawldb',
         'USER': 'crawl',
-        'PASSWORD': 'crawlpi',
-        'HOST': '192.168.1.107',
-        'PORT': '3306',
+        'PASSWORD': 'crawl',
+        'HOST': '192.168.1.106',
+        'PORT': '5432',
     },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'crawl',
+    #     'USER': 'crawl',
+    #     'PASSWORD': 'crawlpi',
+    #     'HOST': '192.168.1.107',
+    #     'PORT': '3306',
+    # },
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'crawl',

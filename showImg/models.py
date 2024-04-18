@@ -27,6 +27,8 @@ class Comic(models.Model):
     comic_name = models.CharField(max_length=255)
     chapter_num = models.IntegerField(default=0)
     update_time = models.DateTimeField(auto_now=True)
+    class Meta:
+        managed = False
 
 # 章节图片表
 class Chapter(models.Model):
@@ -35,7 +37,11 @@ class Chapter(models.Model):
     create_time = models.DateTimeField(default=datetime.datetime.now)
     num_chapter = models.IntegerField()
     img_num = models.IntegerField()
+    class Meta:
+        managed = False
 
 class Img(models.Model):
     chapter = models.ForeignKey(Chapter,on_delete=models.CASCADE,primary_key=True)
     img_path = models.JSONField()
+    class Meta:
+        managed = False
