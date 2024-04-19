@@ -40,7 +40,7 @@ window.onload = window.onscroll = function () { //onscroll()在滚动条滚动�
 
 function img_list() {
     $.ajax({
-        "url": SERVER_HOST + "imgweb/imglists",
+        "url": SERVER_HOST + "imglists",
         "method": "GET",
         // "origin": "192.168.1.107",
     }).success(function (data) {
@@ -297,7 +297,7 @@ function chapterOrderDes(fileName, filePath) {
 function comicView(filePath) {
     console.log(filePath);
     $.ajax({
-        "url": SERVER_HOST + "imgweb/imglists",
+        "url": SERVER_HOST + "imglists",
         "method": "GET",
         'data': {
             "filePath": filePath,
@@ -320,7 +320,7 @@ function comicView(filePath) {
 
 // 查看
 function chapterView(filePath) {
-    window.open('/imgweb/imgpage?filePath=' + filePath)
+    window.open(SERVER_HOST + 'imgpage?filePath=' + filePath)
     imgs = document.querySelectorAll('img');
     check();
     // console.log(fileName);

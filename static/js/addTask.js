@@ -32,7 +32,7 @@ function add_task() {
             return
         }
         $.ajax({
-            'url': SERVER_HOST + 'imgweb/add_task',
+            'url': SERVER_HOST + 'add_task',
             'type': 'POST',
             'data': {
                 'task_url': task_url,

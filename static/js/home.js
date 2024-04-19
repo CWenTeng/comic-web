@@ -1,7 +1,7 @@
 var lastcate = "Task";
 var template_html;
 var IMG_HOST = "http://192.168.1.108:8888/"
-var SERVER_HOST = "http://192.168.1.107:8000/"
+var SERVER_HOST = "http://192.168.1.107/comic/"
 $(function () {
     $.ajax({
         'url':'build/addTask/add_task.html',
